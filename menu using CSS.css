@@ -1,0 +1,77 @@
+#navbar {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    height: 30px;
+    background-color: #666;
+    padding-left: 1%px;
+    padding-right: 1%;;
+    width: 98%;
+    position: fixed;  /* позиц-е относительно окна браузера */
+    top: 0px;
+    z-index: 2;
+  }
+  /* Определяем стиль для всех блоков, содержащих пункты меню (ссылки) 1-го уровня */ 
+  #navbar>div {
+    padding: 0%;
+    width: 24%;
+    text-align: center;
+  }
+  /* Определяем стиль для всех ссылок 1-го уровня меню*/
+  #navbar>div>a {
+    display: block;
+    padding: 0px;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  #ext, .internal_link {display: none;} /* Скрываем блок меню 2-го уровня и блоки, 
+  на которые делаем якорные ссылки*/
+  /* Определение flex-контейнера с элементами всплывающего меню 2-го уровня*/
+    #pop_men {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* Выравнивание элементов вдоль перпендикулярной оси */
+    height: 95px;
+    top: 100%;  /* Это позволяет оставаться меню после наведения на верхний уровень,
+    когда курсор сдвигается вниз */
+    left: 56%;
+    width: 17.5%;
+    position: absolute;
+  }
+   /* Определяем стиль для всех блоков, содержащих ссылки всплывающего меню*/
+  #pop_men div {
+   height: 30px ;
+   width: 100%;
+   background-color: #f90;
+   padding: 0px;
+   border-bottom: 1px solid black
+  }
+  .m2_1 {border-top: 1px solid black}  /* задаем верхнюю границу для первой ссылки во всплывающем меню*/
+   /* Делаем видимым блок содержащий блок всплывающего меню при наведении курсора 
+   на блок с элементом меню 1-го уровняменю*/
+  #navbar > div:hover #ext{display: block;}
+ 
+  #pop_men a { /* Определяем стиль для всех ссылок всплывающего меню*/
+    color: #fff;
+    text-decoration: none;
+  }
+
+    /* Определяем фон блоков, содержащих ссылки 1-го и 2-го уровня 
+    при наведении курсора на эти блоки */
+   #navbar div:hover { background-color: #f90; }
+   #pop_men div:hover {background-color: #666;}
+  
+   /* Определяем стиль для блока, на который не указывают якорные ссылки всплывающего меню */
+  #vis {position: fixed; 
+     top: 35px; z-index: 1;}
+
+   /* Определяем стиль для всех блоков, на которые указывают якорные ссылки 
+   всплывающего меню */
+  .internal_link {position: fixed; 
+     top: 140px;  z-index: 1;}
+
+  :target {display: block} /* Делаем видимым блок, на который перешли по якорной ссылке 
+  из всплывающего меню */

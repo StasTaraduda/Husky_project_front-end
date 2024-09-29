@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Вет-клініка "Хаска"</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="navbar">
+  <div class="navbar-content"> Вас вітає ветеринарна клініка "Хаска"</div>
+  <ul id="navbar">
+    <a href="Lub1.html"><img class="img" src ="logotype.jpg"></a>
+    <li><a href="Lub1.html">Головна</a></li>
+    <li><a href="#">Інформація</a>
+      <ul>
+        <li><a href="#">Графік роботи</a></li>
+        <li><a href="#">Ціни</a></li>
+        <li><a href="#">Розташування</a></li>
+      </ul>
+    </li>
+    <li><a href="Lub1second.html">Новини</a></li>
+    <li><a href="#">Контакти</a>
+      <ul>
+        <li><a href="#">Адреса</a></li>
+        <li><a href="#">Телефон</a></li>
+        <li><a href="#">Пошта</a></li>
+      </ul>
+    </li>
+    <li><a class= "news">Запис тваринки</a></li>
+    <li><a href="./Lub4.html">Обговорення різних проблем</a></li>
+  </ul>
+</div>
+<h1>Запис тваринки</h1>
+<div id="content">
+  <form class="form">
+    <h2>Запис тваринки на прийом</h2>
+      <label>Кличка*</label>
+      <input type="text" name="name" id="name" placeholder="Кличка" minlength ="3" required><br>
+    <label>Тип тваринки*</label>
+    <select name="animal" id="animal" required>
+      <option value=""></option>
+      <option value="Кіт">Кіт</option>
+      <option value="Собака">Собака</option>
+      <option value="Хом'ячок">Хом'ячок</option>
+      <option value="Морська свинка">Морська свинка</option>
+    </select><br>
+    <label>Дата прийому*</label>
+    <input type="date" name="date" id="date" required><br>
+    <label>Ім'я власника*</label>
+    <input type="text" name = "human" id="human" placeholder="Ім'я" required><br>
+    <label>Прізвище власника*</label>
+    <input type="text" name="surname" id="surname" placeholder="Прізвище" required><br>
+    <label>Адреса електроної почти*</label>
+    <input type="email" name="email" id="email" placeholder="Почта" required><br>
+    <label>Номер телефону*</label>
+    <input type="tel" name = "number" id = "number" placeholder="+380963411178" maxlength="13" minlength="13" required><br>
+    <button type="submit" id="save">Зберегти</button>
+    <button id ="clear">Очистити</button>
+  </form>
+</div>
+<div class="modal">
+  <div class="modal_inner">
+    <div class="modal_close">x</div>
+    <div class="modal_content">
+      <!-- <div id ="modal_sentens">Дякую за надану інформацію!Вашу домашня тваринка зареєстрованна на прийом до лікаря.</div> 
+      <div id="modal_name">Кличка:${name.value}</div> 
+      <div id="modal_type_animal">Тип тваринки:${animalType.value}</div>
+      <div id ="modal_data">Дата:${date.value}</div>
+      <div id="modal_human">Ім'я власника:${human.value}</div>
+      <div id ="modal_surname">Прізвище власника:${surname.value}</div>
+      <div id="modal_email">Адреса електроної почти:${email.value}</div>
+      <div id="modal_number">Номер телефону: ${number.value}`)</div> -->
+    </div>
+  </div>
+</div>
+<script src="./main.js"></script>
+</body>
+</html>
